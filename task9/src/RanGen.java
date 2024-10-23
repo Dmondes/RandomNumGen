@@ -11,10 +11,13 @@ public class RanGen {
         System.out.println("Enter quit to quit, type anything else to continue");
         while (!scan.nextLine().toLowerCase().trim().equals("quit")) {
             int sum = 0;
+            String store = "";
             for (int i = 0; i < 6; i++) {
                 int num = rand.nextInt(10);
-                sum = sum * 10 + num;
+                store = store + String.valueOf(num);
+                System.out.println(store);
             }
+            sum = Integer.valueOf(store);
             ArrayList<Integer> guesses = new ArrayList<>();
             while (true) {
                 System.out.println("Enter guess: ");
